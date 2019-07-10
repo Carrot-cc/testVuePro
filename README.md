@@ -18,9 +18,9 @@
 
 ### App.vue
 
-> <template></template>
+> `<template></template>` 
 >
-> <script></script>
+> `<script></script>`
 >
-> <style></style>
+> `<style></style>`
 
