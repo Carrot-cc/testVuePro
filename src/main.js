@@ -1,13 +1,13 @@
 import Vue from 'vue'
 // 1.1 路由的包
-import VueRouter from 'vue-router'
-Vue.use(VueRouter)
+/* import VueRouter from 'vue-router'
+Vue.use(VueRouter) */
 
 // 2.1 我们不使用这个vue-resource的包，我们选择axios
 import axios from 'axios';
 axios.defaults.baseURL = 'http://www.liulongbin.top:3005';
 // 这是修改Vue的原型，可以让我们使用axios和vue-resource类似，直接使用 this.$http.xxx 就可以使用了
-Vue.prototype.$http= axios;
+Vue.prototype.$http = axios;
 
 
 // 拦截器配置，  这是请求拦截器，所有请求发送出去之前都要走这里
@@ -29,9 +29,13 @@ axios.interceptors.response.use(function (response) {
 });
 
 // 导入 MUI 的样式
-import './lib/mui/css/mui.min.css'
+/* import './lib/mui/css/mui.min.css' */
+import './assets/mui/css/mui.min.css'
 // 导入扩展图标样式
-import './lib/mui/css/icons-extra.css'
+/* import './lib/mui/css/icons-extra.css' */
+import './assets/mui/css/icons-extra.css'
+
+import './scss/app.scss'
 
 
 // 按需导入 Mint-UI 中的组件， 工作里面都是按需导入，就是说我们需要什么组件我们就导入什么组件，并不用把所有的文件都导入进来
@@ -46,12 +50,12 @@ Vue.use(MintUI)
 import 'mint-ui/lib/style.css'
 
 // 1.3 导入自己的 router.js 路由模块
-import router from './router.js'
+import router from './router/index.js'
 
 // 导入 App 根组件
-import app from './App.vue'
+import App from './App.vue'
 var vm = new Vue({
   el: '#app',
-  render: c => c(app),
+  render: c => c(App),
   router,
 })
