@@ -35,7 +35,10 @@ import './assets/mui/css/mui.min.css'
 /* import './lib/mui/css/icons-extra.css' */
 import './assets/mui/css/icons-extra.css'
 
+
 import './scss/app.scss'
+import './scss/home.scss'
+import './scss/news.scss'
 
 
 // 按需导入 Mint-UI 中的组件， 工作里面都是按需导入，就是说我们需要什么组件我们就导入什么组件，并不用把所有的文件都导入进来

@@ -7,6 +7,7 @@ import HomeContainer from '../components/layout/HomeContainer.vue'
 import MemberContainer from '../components/layout/MemberContainer.vue'
 import SearchContainer from '../components/layout/SearchContainer.vue'
 import ShopcarContainer from '../components/layout/ShopcarContainer.vue'
+import NewsList from '../components/news/NewsList.vue'
 
 var router = new VueRouter({
   routes: [{
@@ -28,6 +29,10 @@ var router = new VueRouter({
     {
       path: '/shopcar',
       component: ShopcarContainer
+    },
+    {
+      path: '/home/newslist',
+      component: NewsList
     }
 
   ],
